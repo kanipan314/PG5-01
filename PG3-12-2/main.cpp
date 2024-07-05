@@ -12,7 +12,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	GameManager* gameManeger = new GameManager;
 
 	gameManeger->Run();
-	gameManeger->~GameManager();
+	
+	delete gameManeger;
 
 	//// ウィンドウの×ボタンが押されるまでループ
 	//while (Novice::ProcessMessage() == 0) {
